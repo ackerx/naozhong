@@ -40,8 +40,6 @@ if __name__ == '__main__':
         print('无效时间,退出')
         exit(0)    
     
-    call = 0
-    
     while True:
         cur_time = dt.now().strftime("%H%M")
         h = cur_time[0:2]
@@ -49,7 +47,6 @@ if __name__ == '__main__':
         print('\r', dt.now().strftime("%Y%m%d %H:%M:%S"), end='', flush=True)
         if h == hh and m == mm:            
             print('\n到时间了！！！')
-            call = 1
             beep(5)            
             break        
         else:                        
